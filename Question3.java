@@ -11,6 +11,9 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
-    
+    //System.out.print("Enter an integer: ");
+    int integer = in.nextInt();
+    int result = (int)Math.pow(integer,2);
+    System.out.println("Result: " + result);
   }
 }
