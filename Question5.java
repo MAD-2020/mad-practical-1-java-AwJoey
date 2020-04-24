@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Question5
 {
@@ -27,6 +28,33 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int occurence = 0;
+    int mode = 0;
+    ArrayList<Integer> data = new ArrayList<>();
+
+    while (occurence == 0 || data.size() < 5)
+    {
+      //System.out.print("Enter a number: ");
+      int number = in.nextInt();
+      data.add(number);
+      for (int j = 0; j < data.size(); j++)
+      {
+        int occ = 0;
+        for (int k = 0; k < data.size(); k++)
+        {
+          if (data.get(j) == data.get(k))
+          {
+            occ += 1;
+            if (occ-1 > occurence)
+            {
+              occurence = occ;
+              mode = data.get(j);
+            }
+          }
+        }
+        }
+      }
+      System.out.println(mode);
     
   }
 }
