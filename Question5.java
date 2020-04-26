@@ -31,8 +31,10 @@ public class Question5
     int occurence = 0;
     int mode = 0;
     ArrayList<Integer> data = new ArrayList<>();
-
-    while (occurence == 0 || data.size() < 5)
+    
+    //System.out.print("Enter the number of integers you will be entering next: ");
+    int noOfInt = in.nextInt();
+    while (data.size() == noOfInt)
     {
       //System.out.print("Enter a number: ");
       int number = in.nextInt();
