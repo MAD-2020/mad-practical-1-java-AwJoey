@@ -34,27 +34,29 @@ public class Question5
     
     //System.out.print("Enter the number of integers you will be entering next: ");
     int noOfInt = in.nextInt();
-    while (data.size() == noOfInt)
+    
+    while (data.size() != noOfInt)
     {
       //System.out.print("Enter a number: ");
       int number = in.nextInt();
       data.add(number);
-      for (int j = 0; j < data.size(); j++)
+    }
+   
+    for (int j = 0; j < data.size(); j++)
+    {
+      int occ = 0;
+      for (int k = 0; k < data.size(); k++)
       {
-        int occ = 0;
-        for (int k = 0; k < data.size(); k++)
+        if (data.get(j) == data.get(k))
         {
-          if (data.get(j) == data.get(k))
+          occ += 1;
+          if (occ-1 > occurence)
           {
-            occ += 1;
-            if (occ-1 > occurence)
-            {
-              occurence = occ;
-              mode = data.get(j);
-            }
+            occurence = occ;
+            mode = data.get(j);
           }
         }
-        }
+      }
       }
       System.out.println(mode);
     
