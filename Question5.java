@@ -50,7 +50,7 @@ public class Question5
         if (data.get(j) == data.get(k))
         {
           occ += 1;
-          if (occ-1 > occurence)
+          if (occ-1 >= occurence)
           {
             occurence = occ;
             mode = data.get(j);
